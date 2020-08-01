@@ -1,0 +1,630 @@
+/* General Basics*/
+:root {
+	--primary-color: #e50914;
+	--dark-color: #141414;
+	--light-color: #f4f4f4;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #000;
+	color: #999;
+}
+
+ul {
+	list-style: none;
+}
+
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+/* SHOWCASE*/
+.showcase {
+	width: 100%;
+	height: 90vh;
+	position: relative;
+    background: url('images/background.jpg') no-repeat center center/cover;
+}
+.showcase-top {
+	position: relative;
+	z-index: 2;
+    height: 90px;
+    display: flex;
+    padding: 20px 0 0;
+}
+.showcase-top-container{
+    width: 100%;
+    margin: 0 3.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.showcase-top img{
+    width: 170px;
+    height: 55px;
+    padding: 4px 0 0;
+}
+.showcase::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.6);
+	box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+.sign-in-btn{
+    margin: 8px 0 0;
+    padding: 8px 17px;
+    background-color: #e50914;
+    border-radius: 2.5px;
+    color: #FFFFFF;
+    float: right;
+    border: none;
+    cursor: pointer;
+}
+.showcase-content{
+    position: relative;
+    width: 100%;
+    padding: 75px 0;
+    margin: 5% auto;
+    text-align: center;
+    color: white;
+    z-index: 3;
+}
+.showcase-content h1 {
+    font-size: 60px;
+    letter-spacing: 1.5px;
+}
+.showcase-content h3{
+    padding: 10px 0;
+    font-size: 25px;
+    letter-spacing: 1.2px;
+    font-weight: 500;
+}
+.showcase-content p{
+    font-size: 20px;
+    padding: 10px 0;
+}
+.showcase-content input{
+    width: 500px;
+    height: 70px;
+    outline: none;
+    font-size: 30px;
+    padding: 5px;
+}
+.showcase-content input::placeholder{
+    font-size: 20px;
+    padding: 5px;
+}
+.showcase-content button{
+    width: 353px;
+    height: 70px;
+    background: #E50914;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    align-content: center;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    outline: none;
+    cursor: pointer;
+
+}
+.showcase-content button:hover{
+    cursor: pointer;
+}
+.showcase-content .fa {
+    font-size: 25px;
+    padding: 5px;
+}
+.showcase-content .email-form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: auto;
+
+}
+.showcase-content .email-form .email-form-lockup{
+   display: flex;
+   height: auto;
+}
+.elfsight-app-dc35b129-6a0c-4651-9be1-a3f4083575f0{
+    float: left;
+}
+/*TV SHOWCASE*/
+.showcase-tv{
+    width: 100%;
+    border-top: 8px solid rgb(39, 38, 38);
+    display: flex;
+
+}
+.showcase-tv .tv-info{
+    width: 100%;
+    padding: 4.3% 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.showcase-tv .tv-info .online-tv-frame video{
+  width: 500px;
+  height: 370px;
+}
+.showcase-tv .about-tv h1{
+    font-size: 50px;
+    color: white;
+    padding-bottom: 30px;
+}
+.showcase-tv .about-tv p{
+    font-size: 25px;
+    color: white;
+    padding-bottom: 30px;
+}
+/*PHone SHOWCASE*/
+.showcase-mobile{
+    width: 100%;
+    border-top: 8px solid rgb(39, 38, 38);
+    display: flex;
+
+}
+.showcase-mobile .mobile-info{
+    width: 100%;
+    padding: 4.3% 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.showcase-mobile img{
+    width: 550px;
+}
+.showcase-mobile .about-mobile h1{
+    font-size: 50px;
+    color: white;
+    padding-bottom: 30px;
+}
+.showcase-mobile .about-mobile p{
+    font-size: 25px;
+    color: white;
+    padding-bottom: 30px;
+}
+/*FAQ SHOWCASE*/
+.FAQ-showcase{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 8px solid rgb(39, 38, 38);
+}
+.question-showcase{
+    width: 100%;
+    padding: 2% 15%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+::-webkit-details-marker{
+    float: right;
+    margin-top: 3px;
+ }
+details{
+    background-color: rgb(39, 38, 38);
+    width: 100%;
+    color: white;
+    padding: 2% 5%;
+    margin-bottom:1%;
+}
+details summary{
+    outline: none;
+    cursor: pointer;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+details .text{
+    color: rgb(172, 168, 168);
+    padding: 1% 1.5%;
+    line-height: 1.5;
+    letter-spacing: .5px;
+    word-spacing: .5px;
+    
+}
+details .text{
+    position: relative;
+}
+details .text::before{
+    content: "";
+    width: 3px;
+    margin-right: 1%;
+    height: 100%;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+
+}
+.FAQ{
+    font-size: 40px;
+    color: white;
+    padding: 3% 0 4% 0;
+    text-transform: uppercase;
+}
+
+/* FOOTER SHOWCASE*/
+.showcase-bottom{
+    width: 100%;
+    border-top: 8px solid rgb(39, 38, 38);
+}
+.footer-items-showcase{
+    width: 100%;
+    padding: 3% 20%;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-column-showcase{
+    display: flex;
+    flex-direction: column;
+
+}
+.footer-column-showcase a{
+    padding: 2% 0;
+    color: gray;
+    font-size: 14px;
+    border-bottom: 1px solid transparent;
+    transition: .2s ease-out;
+    padding-top: 3%;
+}
+.footer-column-showcase a:hover{
+    border-bottom: 1px solid gray;
+    transition: .2s ease-in;
+}
+.showcase-bottom p{
+    font-size: 15px;
+    padding-top: 5%;
+    color: white;
+    text-transform: uppercase;
+}
+/*MODAL SHOWCASE*/
+.alert-danger{
+    width: 100%;
+    padding: 3% 2%;
+    margin: 1% 0 5% 0;
+    border-radius: 2px;
+    color: #D8000C;
+    background-color: #FFBABA;
+}
+
+#modal{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    justify-content: center;
+    display: none;
+    z-index: 5;
+}
+.times .fa{
+   float: right;
+   color: white;
+   cursor: pointer;
+   font-size: 20px;
+}
+.modal-box form{
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 415px;
+    height: 530px;
+    margin: 5% 6%;
+    padding: 20px 50px;
+    display: flex;
+    flex-flow: column;
+}
+.modal-box .input-box{
+    margin: 10% 0 0 0;
+}
+.modal-box form .input-box input{
+    width: 100%;
+    height: 50px;
+    margin: 5% 0 0 0;
+    padding: 16px 20px ;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+}
+.modal-box .input-box input::placeholder{
+    font-size: 16px;
+    color: #8c8c8c
+}
+.modal-box .sign-items h1{
+    color: white;
+}
+
+.modal-box .modal-sign-in{
+    width: 100%;
+    background-color: #e50914;
+    border: none;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 24px 0px 12px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+.modal-box .user-problems{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-bottom-stuff{
+    display: flex;
+    flex-direction: column;
+}
+.modal-bottom-stuff .facebook{
+    margin-top: 10%;
+    display: flex;
+    justify-content: flex-start;
+}
+.facebook p{
+    display: flex;
+    width: 100%;
+}
+.modal-bottom-stuff .new-steflix{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.new-steflix p{
+    padding-right: 10px;
+}
+.facebook p{
+    padding-top: 1.5%;
+    padding-left: 2%;
+}
+.facebook .fa{
+    font-size: 25px;
+    color: #3b5998;
+}
+.elfsight-app-dc35b129-6a0c-4651-9be1-a3f4083575f0{
+    float: left;
+}
+
+
+/* RESPONSIVENESS */
+@media (max-width: 1024px) {
+    
+		.showcase {
+            height: auto;
+        }
+    
+        .showcase-top img {
+            top: 30%;
+            left: 5%;
+            transform: translate(0);
+        }
+    
+        .showcase-content h1 {
+            font-size: 2.7rem;
+            line-height: 1;
+        }
+    
+        .showcase-content p {
+            font-size: 1rem;
+        }
+    
+        .email-form-lockup {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            flex-flow: wrap;
+            font-size: 1.5rem;
+            height: auto;
+        }
+        input.email-box{
+            width: 750px;
+            height:50px;
+        }
+        button.btn{
+            margin-top: 10px;
+            width: 350px;
+            height: 50px;
+            font-size: 18px;
+            margin-top: 10%;
+            text-align: center;
+        }
+        .showcase-tv .tv-info{
+            display: flex;
+            flex-flow: wrap;
+        }
+        .showcase-tv .tv-info .online-tv-frame video{
+            width: 400px;
+            height: 350px;
+        }
+        .showcase-tv .tv-info h1{
+            font-size: 50px;
+        }        
+        .showcase-mobile .mobile-info{
+            display: flex;
+            flex-flow: wrap;
+        }
+        .showcase-mobile .mobile-info img{
+            width: 450px;
+        }
+        .showcase-mobile .mobile-info h1{
+            font-size: 50px;
+        }
+        .modal-box form{
+            height: 550px;
+            padding: 50px 30px;
+            box-shadow: 2px 2px 10px white;
+            margin-top: 15%;
+        }
+        .modal-box{
+            position: absolute;
+            top: 0;
+        }
+}
+       
+    
+    @media (max-width: 700px) {
+        .modal-box form{
+            height: 450px;
+            padding: 30px 15px;
+            box-shadow: 2px 2px 10px 2px rgb(94, 93, 93)  ;
+            margin-top: 30%;
+        }
+        .modal-box{
+            position: absolute;
+            top: 0;
+        }
+        
+        .showcase::after {
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
+        }
+        .showcase-top img{
+            width: 120px;
+            height: 45px;
+            padding: 4px 0 0;
+        }
+        .email-form-lockup {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            flex-flow: wrap;
+            font-size: 1.5rem;
+        }
+        input.email-box{
+            width: 300px;
+            height:40px;
+        }
+        button.btn{
+            margin-top: 10px;
+            width: 180px;
+            height: 35px;
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10%;
+        }
+        .showcase-content h1 {
+            font-size: 1.7rem;
+            line-height: 1;
+        }
+        .showcase-tv .tv-info{
+            display: flex;
+            flex-flow: wrap;
+        }
+        .showcase-tv .tv-info .online-tv-frame video{
+            width: 370px;
+            height: 330px;
+        }
+        .showcase-tv .tv-info h1{
+            font-size: 40px;
+        }        
+        .showcase-mobile .mobile-info{
+            display: flex;
+            flex-flow: wrap;
+        }
+        .showcase-mobile .mobile-info img{
+            width: 350px;
+        }
+        .showcase-mobile .mobile-info h1{
+            font-size: 40px;
+        }
+        details summary{
+            outline: none;
+            cursor: pointer;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        details .text{
+            color: rgb(172, 168, 168);
+            padding: 1% 1.5%;
+            line-height: 1;
+            letter-spacing: .5px;
+            word-spacing: .5px;
+            font-size: 10px;
+        }
+        .footer-items-showcase{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .footer-column-showcase{
+            margin-top: 10%;
+           
+        }
+        .showcase-top{
+            margin: 0;
+            padding: 0;
+        }
+    }
+      
+    
+    @media(max-height: 600px) {
+        .showcase {
+            height: auto;
+        }
+        .showcase-content h1{
+            font-size: 25px;
+        }
+        .showcase-content p{
+            font-size: 15px;
+        }
+        .showcase-content h3{
+            font-size: 20px;
+        }
+        .email-form-lockup {
+            display: flex;
+            flex-flow: wrap;
+            justify-content: center;
+            flex-flow: wrap;
+            font-size: 1.5rem;
+        }
+        .showcase-tv .tv-info{
+            display: flex;
+            flex-flow: wrap;
+        }
+        .showcase-tv .tv-info .online-tv-frame video{
+            width: 260px;
+            height: 210;
+        }
+        .showcase-tv .tv-info h1{
+            font-size: 20px;
+        }
+        .showcase-tv .tv-info p{
+            font-size: 15px;
+        }        
+        .showcase-mobile .mobile-info{
+            display: flex;
+            flex-flow: wrap;
+        }
+        .showcase-mobile .mobile-info img{
+            width: 200px;
+        }
+        .showcase-mobile .mobile-info h1{
+            font-size: 15px;
+        }
+        .showcase-mobile .mobile-info p{
+            font-size: 15px;
+        }
+    }
